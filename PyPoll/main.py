@@ -6,7 +6,7 @@ import csv
 csvpath = os.path.join('Resources', 'election_data.csv')
 
 votes_cast = []
-
+li_votes = []
 #read CSV file
 with open(csvpath, newline='') as csvfile:
     #specify deliminator and variable to hold contents
@@ -21,16 +21,14 @@ with open(csvpath, newline='') as csvfile:
     for row in csvreader:
         votes_cast.append(row[2])
     total_votes = len(votes_cast)
-
-
+               
 #Find unique strings(candidates) in votes_cast list
 #store in new variable(list)
 
     candidate_list = list(set(votes_cast))
     print(candidate_list)
-        
-   
-
+    
+    
 #For each candidate vote-append to get candidate_total
 #percent won = 'candidate_total' / total_votes
 #repeat for each candidate
@@ -45,10 +43,10 @@ with open(csvpath, newline='') as csvfile:
 ##End Analysis
 ##Print to terminal
 
-# print("Election Results")
-# print("--------------------------")
+print("Election Results")
+print("--------------------------")
 print(f"Total Votes: {total_votes}")
-# print("--------------------------")
+print("--------------------------")
 # print(f"Khan: {percent won} ( {num of votes} )")
 # print(f"Correy: {percent won} ( {num of votes} )")
 # print(f"Li: {percent won} ( {num of votes} )")

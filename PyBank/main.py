@@ -31,8 +31,8 @@ with open(csvpath, newline='') as csvfile:
     #test to see if prints total number of months
     # print(f"Total Months:{len(total_months)}")
 
-    net_profit = sum(profit_losses)
-    print(f"Net Profit: {net_profit}")
+    # net_profit = sum(profit_losses)
+    # print(f"Net Profit: {net_profit}")
 
 #calculate the net profit by summing all profit/losses
 
@@ -49,8 +49,8 @@ with open(csvpath, newline='') as csvfile:
 
 ## print to terminal
 
-# print("Finantial Anlaysis")
-# print("-------------------------------")
+print("Finantial Anlaysis")
+print("-------------------------------")
 print(f"Total Months: {len(total_months)}")
 # print(f"Total: ${}")
 # print(f"Average Change: ${}")
