@@ -24,8 +24,12 @@ with open(csvpath, newline='') as csvfile:
 
 
 #Find unique strings(candidates) in votes_cast list
-#store in new variable(list?)
+#store in new variable(list)
 
+    candidate_list = list(set(votes_cast))
+    print(candidate_list)
+        
+   
 
 #For each candidate vote-append to get candidate_total
 #percent won = 'candidate_total' / total_votes
