@@ -15,3 +15,19 @@ with open(csvpath, newline='') as csvfile:
     #read header row
     csv_header = next(csvreader)
     # print(csv_header)
+
+##-------------------------------------------------------
+##End Analysis
+##Print to terminal
+
+# Print("Election Results")
+# Print("--------------------------")
+# Print(f"Total Votes: {}")
+# Print("--------------------------")
+# Print(f"Khan: {percent won} ( {num of votes} )")
+# Print(f"Correy: {percent won} ( {num of votes} )")
+# Print(f"Li: {percent won} ( {num of votes} )")
+# Print(f"O'Tooley: {percent won} ( {num of votes} )")
+# Print("--------------------------")
+# Print("Winner: {winner}")
+# Print("--------------------------")
