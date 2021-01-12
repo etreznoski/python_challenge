@@ -34,7 +34,14 @@ with open(csvpath, newline='') as csvfile:
     net_profit = sum(profit_losses)
     print(f"Net Profit: {net_profit}")
 
+#calculate the net profit by summing all profit/losses
 
+#calculate changes in profit/losses over entire period
+#THen find average of those changes
+    #calculate change from one month to the next-store in new list
+    #find mean of new list
+    #find greatest value in new list-grab corresponding date
+    #find lowest value in new list-grab corresponding date
 
 
 ##--------------------------------------------------------
@@ -44,7 +51,7 @@ with open(csvpath, newline='') as csvfile:
 
 # print("Finantial Anlaysis")
 # print("-------------------------------")
-# print(f"Total Months: {len(total_months)}")
+print(f"Total Months: {len(total_months)}")
 # print(f"Total: ${}")
 # print(f"Average Change: ${}")
 # print(f"Greatest Increase in Profits: {}")
