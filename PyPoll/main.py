@@ -16,10 +16,26 @@ with open(csvpath, newline='') as csvfile:
 
     #read header row
     csv_header = next(csvreader)
-    # print(csv_header)
+    
+    #iterate through rows, grab length of votes_cast column
     for row in csvreader:
         votes_cast.append(row[2])
     total_votes = len(votes_cast)
+
+
+#Find unique strings(candidates) in votes_cast list
+#store in new variable(list?)
+
+
+#For each candidate vote-append to get candidate_total
+#percent won = 'candidate_total' / total_votes
+#repeat for each candidate
+
+#winner = candidate with greatest vote total
+
+
+
+
 
 ##-------------------------------------------------------
 ##End Analysis
