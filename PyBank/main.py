@@ -34,14 +34,17 @@ with open(csvpath, newline='') as csvfile:
     #calculate change from one month to the next-store in new list
    
 profit_change = []
-
+total_change = 0
 for x in range(1, len(profit_losses)):
     y = profit_losses[x] - profit_losses[x-1]
     profit_change.append(int(y))
 
 #print(profit_change)
 #find mean of new list
-
+for x in range (0, len(profit_change)):
+    total_change += profit_change[x]
+    avg_change = round((total_change / len(profit_change)), 2)
+print(avg_change)    
 
     #find greatest value in new list-grab corresponding date
     #find lowest value in new list-grab corresponding date
