@@ -45,18 +45,25 @@ for i in votes_cast:
 # print(f"Li: {len(li_votes)}")
 #percent won = 'candidate_total' / total_votes
 #round percent
+#repeat for each candidate
 li_percent = round(((len(li_votes) / total_votes) * 100), 3)
 khan_percent = round(((len(khan_votes) / total_votes) * 100), 3)
 correy_percent = round(((len(correy_votes) / total_votes) * 100), 3)
 otooley_percent = round(((len(otooley_votes) / total_votes) * 100), 3)
 
 # print(li_percent)
-#repeat for each candidate
+
 
 #winner = candidate with greatest vote total
-
-
-
+if li_percent > khan_percent and li_percent > correy_percent and li_percent > otooley_percent:
+    winner = "Li"
+elif khan_percent > li_percent and khan_percent > correy_percent and khan_percent > otooley_percent:
+    winner = "Khan"
+elif correy_percent > khan_percent and correy_percent > li_percent and correy_percent > otooley_percent:
+    winner = "Correy"
+elif otooley_percent > khan_percent and otooley_percent > correy_percent and otooley_percent > li_percent:
+    winner = "O'Tooley"
+# print(winner)
 
 
 ##-------------------------------------------------------
@@ -71,6 +78,6 @@ print(f"Khan: {khan_percent}% ( {len(khan_votes)} )")
 print(f"Correy: {correy_percent}% ( {len(correy_votes)} )")
 print(f"Li: {li_percent}% ( {len(li_votes)} )")
 print(f"O'Tooley: {otooley_percent}% ( {len(otooley_votes)} )")
-# print("--------------------------")
-# print("Winner: {winner}")
-# print("--------------------------")
+print("--------------------------")
+print(f"Winner: {winner}")
+print("--------------------------")
