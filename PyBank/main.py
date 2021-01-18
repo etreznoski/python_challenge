@@ -73,8 +73,6 @@ min_value_index = profit_losses.index(min_value)
 #use index to pull date
 max_date = total_months[max_value_index]
 min_date = total_months[min_value_index]
-
-
 ##--------------------------------------------------------
 ## End Result
 
@@ -87,6 +85,8 @@ print(f"Total: ${total_profit_losses}")
 print(f"Average Change: ${avg_change}")
 print(f"Greatest Increase in Profits: ${max_value} on {max_date}")
 print(f"Greatest Decrease in Profits: ${min_value} on {min_date}")
+
+#Write to text file
 
 
 
