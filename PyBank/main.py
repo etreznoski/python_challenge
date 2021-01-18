@@ -5,8 +5,9 @@ import csv
 #set up path to csv file
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
-#set empty lists
+#set empty lists/variables
 total_months = []
+profit_losses = 0
 
 #read CSV file
 with open(csvpath, newline='') as csvfile:
@@ -24,7 +25,8 @@ with open(csvpath, newline='') as csvfile:
 
          total_months.append(row[0])
 
-         profit_losses = float(row[1])
+         profit_losses += int(row[1])
+
          
 
 
@@ -52,7 +54,7 @@ with open(csvpath, newline='') as csvfile:
 print("Finantial Anlaysis")
 print("-------------------------------")
 print(f"Total Months: {len(total_months)}")
-# print(f"Total: ${}")
+print(f"Total: ${profit_losses}")
 # print(f"Average Change: ${}")
 # print(f"Greatest Increase in Profits: {}")
 # print(f"Greatest Decrease in Profits: {}")
