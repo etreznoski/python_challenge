@@ -44,10 +44,35 @@ for x in range(1, len(profit_losses)):
 for x in range (0, len(profit_change)):
     total_change += profit_change[x]
     avg_change = round((total_change / len(profit_change)), 2)
-print(avg_change)    
+#print(avg_change)    
 
     #find greatest value in new list-grab corresponding date
     #find lowest value in new list-grab corresponding date
+    #start by using a for loop and if statements to find and store min & max
+#set up initial variables-value 0
+min_value = 0
+max_value = 0
+#start for loop
+for x in profit_losses:
+    #use if & elif (start everything off with first value)
+    if min_value == 0:
+        min_value = x
+        max_value = x
+    if x > max_value:
+        max_value = x
+    elif x < min_value:
+        min_value = x
+# print(min_value)
+# print(max_value)
+
+#grab corresponding dates to min and max
+#use min and max as index value in main list
+max_value_index = profit_losses.index(max_value)
+min_value_index = profit_losses.index(min_value)
+
+#use index to pull date
+max_date = total_months[max_value_index]
+min_date = total_months[min_value_index]
 
 
 ##--------------------------------------------------------
@@ -59,9 +84,9 @@ print("Finantial Anlaysis")
 print("-------------------------------")
 print(f"Total Months: {len(total_months)}")
 print(f"Total: ${total_profit_losses}")
-# print(f"Average Change: ${}")
-# print(f"Greatest Increase in Profits: {}")
-# print(f"Greatest Decrease in Profits: {}")
+print(f"Average Change: ${avg_change}")
+print(f"Greatest Increase in Profits: ${max_value} on {max_date}")
+print(f"Greatest Decrease in Profits: ${min_value} on {min_date}")
 
 
 
