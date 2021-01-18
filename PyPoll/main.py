@@ -29,7 +29,7 @@ with open(csvpath, newline='') as csvfile:
 #store in new variable(list)
 
     candidate_list = list(set(votes_cast))
-    print(candidate_list)
+    #print(candidate_list)
     
     
 #For each candidate vote-append to get candidate_total
@@ -44,7 +44,13 @@ for i in votes_cast:
         otooley_votes.append(i)
 # print(f"Li: {len(li_votes)}")
 #percent won = 'candidate_total' / total_votes
+#round percent
+li_percent = round(((len(li_votes) / total_votes) * 100), 3)
+khan_percent = round(((len(khan_votes) / total_votes) * 100), 3)
+correy_percent = round(((len(correy_votes) / total_votes) * 100), 3)
+otooley_percent = round(((len(otooley_votes) / total_votes) * 100), 3)
 
+# print(li_percent)
 #repeat for each candidate
 
 #winner = candidate with greatest vote total
@@ -61,10 +67,10 @@ print("Election Results")
 print("--------------------------")
 print(f"Total Votes: {total_votes}")
 print("--------------------------")
-# print(f"Khan: {percent won} ( {len(khan_votes)} )")
-# print(f"Correy: {percent won} ( {len(correy_votes)} )")
-# print(f"Li: {percent won} ( {len(li_votes)} )")
-# print(f"O'Tooley: {percent won} ( {len(otooley_votes)} )")
+print(f"Khan: {khan_percent}% ( {len(khan_votes)} )")
+print(f"Correy: {correy_percent}% ( {len(correy_votes)} )")
+print(f"Li: {li_percent}% ( {len(li_votes)} )")
+print(f"O'Tooley: {otooley_percent}% ( {len(otooley_votes)} )")
 # print("--------------------------")
 # print("Winner: {winner}")
 # print("--------------------------")
