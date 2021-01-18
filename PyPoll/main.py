@@ -7,6 +7,9 @@ csvpath = os.path.join('Resources', 'election_data.csv')
 
 votes_cast = []
 li_votes = []
+khan_votes = []
+correy_votes = []
+otooley_votes = []
 #read CSV file
 with open(csvpath, newline='') as csvfile:
     #specify deliminator and variable to hold contents
@@ -30,7 +33,18 @@ with open(csvpath, newline='') as csvfile:
     
     
 #For each candidate vote-append to get candidate_total
+for i in votes_cast:
+    if i == "Li":
+        li_votes.append(i)
+    elif i == "Khan":
+        khan_votes.append(i)
+    elif i == "Correy":
+        correy_votes.append(i)
+    elif i == "O'Tooley":
+        otooley_votes.append(i)
+# print(f"Li: {len(li_votes)}")
 #percent won = 'candidate_total' / total_votes
+
 #repeat for each candidate
 
 #winner = candidate with greatest vote total
@@ -47,10 +61,10 @@ print("Election Results")
 print("--------------------------")
 print(f"Total Votes: {total_votes}")
 print("--------------------------")
-# print(f"Khan: {percent won} ( {num of votes} )")
-# print(f"Correy: {percent won} ( {num of votes} )")
-# print(f"Li: {percent won} ( {num of votes} )")
-# print(f"O'Tooley: {percent won} ( {num of votes} )")
+# print(f"Khan: {percent won} ( {len(khan_votes)} )")
+# print(f"Correy: {percent won} ( {len(correy_votes)} )")
+# print(f"Li: {percent won} ( {len(li_votes)} )")
+# print(f"O'Tooley: {percent won} ( {len(otooley_votes)} )")
 # print("--------------------------")
 # print("Winner: {winner}")
 # print("--------------------------")
