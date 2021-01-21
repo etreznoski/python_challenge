@@ -68,7 +68,7 @@ elif otooley_percent > khan_percent and otooley_percent > correy_percent and oto
 
 ##-------------------------------------------------------
 ##End Analysis
-##Print to terminal
+
 
 print("Election Results")
 print("--------------------------")
@@ -81,3 +81,5 @@ print(f"O'Tooley: {otooley_percent}% ( {len(otooley_votes)} )")
 print("--------------------------")
 print(f"Winner: {winner}")
 print("--------------------------")
+
+##Print to txt file
