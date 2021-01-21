@@ -87,7 +87,16 @@ print(f"Greatest Increase in Profits: ${max_value} on {max_date}")
 print(f"Greatest Decrease in Profits: ${min_value} on {min_date}")
 
 #Write to text file
+analysis_file = open("analysis.txt", "w")
+l = ["Financial Analysis\n",
+f"Total Months: {len(total_months)}\n",
+f"Total: ${total_profit_losses}\n",
+f"Average Change: ${avg_change}\n",
+f"Greatest Increase in Profits: ${max_value} on {max_date}\n",
+f"Greatest Decrease in Profits: ${min_value} on {min_date}\n"]
 
+analysis_file.writelines(l)
+analysis_file.close
 
 
 

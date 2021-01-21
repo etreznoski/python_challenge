@@ -83,3 +83,18 @@ print(f"Winner: {winner}")
 print("--------------------------")
 
 ##Print to txt file
+analysis_file = open("analysis.txt", "w")
+l = [f"Election Results\n",
+"--------------------------\n",
+f"Total Votes: {total_votes}\n",
+"--------------------------\n",
+f"Khan: {khan_percent}% ( {len(khan_votes)} )\n",
+f"Correy: {correy_percent}% ( {len(correy_votes)} )\n",
+f"Li: {li_percent}% ( {len(li_votes)} )\n",
+f"O'Tooley: {otooley_percent}% ( {len(otooley_votes)} )\n",
+"--------------------------\n",
+f"Winner: {winner}\n",
+"--------------------------\n"]
+
+analysis_file.writelines(l)
+analysis_file.close
